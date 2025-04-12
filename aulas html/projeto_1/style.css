@@ -1,0 +1,110 @@
+/* ===== Variáveis globais ===== */
+:root {
+    --main-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --main-color: #1f2937;
+    --highlight: #3b82f6;
+    --padding: 2rem;
+    --radius: 10px;
+    --transition: 0.4s ease;
+    --box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--main-bg);
+    color: var(--main-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: var(--padding);
+    background: var(--highlight);
+    color: white;
+    animation: aparecer 2s ease;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--padding);
+    padding: var(--padding);
+  }
+  
+  .card {
+    background: var(--card-bg);
+    padding: var(--padding);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .produto .imagem {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, var(--highlight), #60a5fa);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    animation: pulse 3s infinite;
+  }
+  
+  .btn {
+    background: var(--highlight);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+  }
+  
+  .btn:hover {
+    background-color: #2563eb;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #e5e7eb;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  /* ===== Animações ===== */
+  @keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.7; }
+  }
+  
+  /* ===== Responsivo ===== */
+  @media (max-width: 600px) {
+    :root {
+      --padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .produto .imagem {
+      height: 120px;
+    }
+  }
+  

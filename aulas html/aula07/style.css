@@ -1,0 +1,102 @@
+/* ===== Variáveis globais ===== */
+:root {
+    --main-bg: #f0f4ff;
+    --main-color: #2d3e50;
+    --highlight-color: #005eff;
+    --box-color: #88cfff;
+    --text-size: 18px;
+    --padding: 1.5rem;
+    --transition-duration: 0.5s;
+  }
+  
+  body {
+    background-color: var(--main-bg);
+    color: var(--main-color);
+    font-size: var(--text-size);
+    padding: var(--padding);
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    color: var(--highlight-color);
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color var(--transition-duration) ease;
+  }
+  
+  .btn:hover {
+    background-color: #003d99;
+  }
+  
+  .box-transicao {
+    margin-top: 2rem;
+    width: 150px;
+    height: 150px;
+    background-color: var(--box-color);
+    transition: transform var(--transition-duration);
+  }
+  
+  .box-transicao:hover {
+    transform: scale(1.2);
+  }
+  
+  .box-animada {
+    margin-top: 2rem;
+    width: 100px;
+    height: 100px;
+    background-color: #00c9a7;
+    animation: mover 2s ease-in-out infinite;
+    border-radius: 8px;
+  }
+  
+  @keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+  }
+  
+  .box-complexa {
+    margin-top: 2rem;
+    width: 100px;
+    height: 100px;
+    background-color: #ffb347;
+    animation: efeitoComplexo 4s ease-in-out infinite;
+    opacity: 1;
+  }
+  
+  @keyframes efeitoComplexo {
+    0% {
+      transform: translateX(0);
+      background-color: #ffb347;
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(50px);
+      background-color: #ff6666;
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      background-color: #ffb347;
+      opacity: 1;
+    }
+  }
+  
+  /* ===== Responsividade ===== */
+  @media (max-width: 600px) {
+    :root {
+      --text-size: 16px;
+      --padding: 1rem;
+    }
+  
+    .box-animada, .box-complexa {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
