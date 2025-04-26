@@ -1,0 +1,131 @@
+:root {
+    --cor-primaria: #333;
+    --cor-secundaria: #f5f5f5;
+    --cor-texto: #222;
+    --cor-destaque: #4CAF50;
+    --cor-footer: #111;
+  
+    --fonte-principal: 'Arial', sans-serif;
+  
+    --espacamento: 1rem;
+    --borda-arredondada: 8px;
+    --largura-maxima: 1200px;
+  }
+  
+  body {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto);
+    background-color: white;
+  }
+  
+  header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: var(--espacamento);
+  }
+  
+  header h1 {
+    text-align: center;
+    margin-bottom: var(--espacamento);
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    max-width: var(--largura-maxima);
+    margin: 2rem auto;
+    padding: 0 var(--espacamento);
+  }
+
+  img {
+    height: 180px;
+    width: 50px;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  .grid-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .card-projeto {
+    background-color: var(--cor-secundaria);
+    border-radius: var(--borda-arredondada);
+    padding: var(--espacamento);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-projeto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .imagem-projeto {
+    width: 100%;
+    border-radius: var(--borda-arredondada);
+  }
+  
+  .botoes {
+    margin-top: var(--espacamento);
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .botoes a {
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--borda-arredondada);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .botoes a:hover {
+    background-color: #3e8e41; /* tom mais escuro no hover */
+  }
+  
+  .data {
+    margin-top: var(--espacamento);
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  footer {
+    background-color: var(--cor-footer);
+    color: white;
+    text-align: center;
+    padding: var(--espacamento);
+  }
+  
+  /* Responsivo para telas pequenas */
+  @media (max-width: 768px) {
+    .grid-projetos {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
