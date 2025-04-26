@@ -120,6 +120,26 @@
     text-align: center;
     padding: var(--espacamento);
   }
+
+  .lista-skills,
+.lista-certificacoes {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.lista-skills li,
+.lista-certificacoes li {
+  background-color: var(--cor-secundaria);
+  padding: 0.5rem 1rem;
+  border-radius: var(--borda-arredondada);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
   
   /* Responsivo para telas pequenas */
   @media (max-width: 768px) {
