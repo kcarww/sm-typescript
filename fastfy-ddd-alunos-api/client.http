@@ -1,0 +1,37 @@
+# @name post_alunos
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+    "matricula": "1321546",
+    "nome": "Joana da Silvo Santos",
+    "curso": "Engenharia de Software",
+    "idade": 20
+}
+
+###
+
+# @name get_alunos
+GET http://localhost:3000/alunos
+
+###
+
+# @name get_aluno
+GET http://localhost:3000/alunos/132154
+
+
+###
+# @name put_aluno
+PUT http://localhost:3000/alunos/132154
+Content-Type: application/json
+
+{
+    "nome": "Joana da Silva Atualizada",
+    "curso": "Engenharia de Software Avançada",
+    "idade": 21
+}
+
+###
+
+# @name delete_aluno
+DELETE http://localhost:3000/alunos/132154   
